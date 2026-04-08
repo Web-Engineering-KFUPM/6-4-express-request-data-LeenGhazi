@@ -109,6 +109,7 @@ import express from "express";
 
 // create express app instance to create web server
 const app = express();
+app.use(express.json());
 app.get("/", (req, res) => {
   res.json({ ok: true, msg: "Welcome to my API" });
 });
